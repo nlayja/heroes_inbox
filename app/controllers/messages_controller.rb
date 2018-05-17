@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
   # GET /messages/new
   def new
     @message = Message.new
+    @hero = Hero.find(params[:hero_id])
   end
 
   # GET /messages/1/edit

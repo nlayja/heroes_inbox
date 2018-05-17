@@ -1,0 +1,16 @@
+<h1>Bienvenido al centro de mensajes superheroes</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+<%= link_to "registro de heroes", new_hero_path %>
+<h3> Lista de heroes </h3>
+<table>
+  <thead>
+    <td>Nombre</td>
+    <td></td>
+  </thead>
+  <% @heroes.each do |heroe| %>
+  <tr>
+      <td><%= heroe.nickname %></td>
+      <td><%= link_to "Enviar mensaje", new_message_path(hero_id: heroe.id), class: "btn btn-primary" %></td>
+  </tr>
+  <% end %>
+</table>
