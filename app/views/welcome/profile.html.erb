@@ -1,2 +1,12 @@
-<h1>Welcome#profile</h1>
-<p>Find me in app/views/welcome/profile.html.erb</p>
+<h1>Bienvenido <%= @hero.nickname %></h1>
+<h3>Lista de mensajes </h3>
+<table>
+  <thead>
+    <td>Mensaje</td>
+    <td>Fecha y hora</td>
+  </thead>
+  <% @messages.each do |message| %>
+    <td><%= message.content %></td>
+    <td><%= message.created_at %></td>
+  <% end %>
+</table>

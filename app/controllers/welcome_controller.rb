@@ -4,5 +4,7 @@ class WelcomeController < ApplicationController
   end
 
   def profile
+    @hero = Hero.find(params[:hero_id])
+    @messages = @hero.messages
   end
 end
