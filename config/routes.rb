@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'invenccion/index'
+
   root 'welcome#index'
   get 'welcome/index'
 
